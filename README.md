@@ -5,11 +5,11 @@
 
 * **Notebook:**
     
-    https://mybinder.org/v2/gh/epifanio/WUI/HEAD?labpath=app%2FSIE%2FSIE.ipynb
+    https://mybinder.org/v2/gh/epifanio/WUI/HEAD?labpath=bokeh-app%2FSIE.ipynb
 
 * **Bokeh APP:**
 
-    https://mybinder.org/v2/gh/epifanio/WUI/HEAD?urlpath=/proxy/5006/app/SIE
+    https://mybinder.org/v2/gh/epifanio/WUI/HEAD?urlpath=/proxy/5006/bokeh-app
 
 
 ### Local deployment
