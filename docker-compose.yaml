@@ -14,8 +14,8 @@ services:
       BOKEH_LOG_LEVEL: 'debug'
       PYTHONUNBUFFERED: 1
     volumes:
-      - ./APPS/SIE:/SIE
-      - ./APPS/entrypoint.sh:/entrypoint.sh
+      - ./bokeh-app:/SIE
+      - ./bokeh-app/entrypoint.sh:/entrypoint.sh
 
     ports:
       - 7000:7000
