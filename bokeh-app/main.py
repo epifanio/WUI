@@ -98,12 +98,12 @@ def get_mplot(df, cols=None):
     return mplot
 
 def get_data():
-    nc_url = "http://hyrax.epinux.com/opendap/local_data/osisaf_nh_iceextent_daily.nc"
+    nc_url = "https://thredds.met.no/thredds/dodsC/osisaf/met.no/ice/index/v2p1/nh/osisaf_nh_sie_daily.nc"
     ds = xr.open_dataset(nc_url)
     df = ds.to_dataframe()
     new_data = {
-        str(i): df["sie"].loc[df.index.groupby(df.index.year)[i]].values
-        for i in df.index.groupby(df.index.year)
+        str(i): df["sie"].loc[df.index.groupby(df.index.get_level_values(0).year)[i]].values  
+        for i in df.index.get_level_values(0).groupby(df.index.get_level_values(0).year)
     }
     all_years = pd.DataFrame(dict([(k, pd.Series(v)) for k, v in new_data.items()]))
     all_years.dataset_metadata = ""
